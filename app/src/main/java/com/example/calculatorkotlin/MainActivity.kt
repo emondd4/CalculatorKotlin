@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         TipCalculator.setOnClickListener {
-            Toast.makeText(this,"Button 2",Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this,TipCalculatorActivity::class.java))
         }
     }
 

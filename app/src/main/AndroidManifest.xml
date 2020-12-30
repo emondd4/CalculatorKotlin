@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CalculatorKotlin">
         <activity
-            android:name=".TipCalculator"
+            android:name=".TipCalculatorActivity"
             android:label="@string/title_activity_tip_calculator"
             android:theme="@style/Theme.CalculatorKotlin.NoActionBar"></activity>
         <activity android:name=".BmiCalculatorActivity" />

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import org.w3c.dom.Text
 
 class BmiCalculatorActivity : AppCompatActivity() {
@@ -28,23 +29,24 @@ class BmiCalculatorActivity : AppCompatActivity() {
             var bmi = 0.0
 
             if (i1 != 0.0 && i2 != 0.0){
-                bmi = i2 / (i1 * i1)
+                bmi = String.format("%.2f", (i2 / (i1 * i1))).toDouble()
+                Toast.makeText(this,"" + bmi,Toast.LENGTH_SHORT).show()
                 Result.text = bmi.toString()
             }
 
-            if (bmi < 16.0){
+            if (bmi <= 16.0){
                 Result_Category.text = "Severe Thinness"
-            }else if (bmi > 16.0 && bmi < 17.0){
+            }else if (bmi > 16.1 && bmi <= 17.0){
                 Result_Category.text = "Moderate Thinness"
-            }else if (bmi > 17.0 && bmi < 18.5){
+            }else if (bmi > 17.0 && bmi <= 18.5){
                 Result_Category.text = "Mild Thinness"
-            }else if (bmi > 18.5 && bmi < 25.0){
-                Result_Category.text = "Normal Thinness"
-            }else if (bmi > 25.0 && bmi < 30.0){
+            }else if (bmi > 18.6 && bmi <= 25.0){
+                Result_Category.text = "Normal"
+            }else if (bmi > 25.0 && bmi <= 30.0){
                 Result_Category.text = "OverWeight"
-            }else if (bmi > 30.0 && bmi < 35.0){
+            }else if (bmi > 30.0 && bmi <= 35.0){
                 Result_Category.text = "Obese Class 1"
-            }else if (bmi > 35.0 && bmi < 40.0){
+            }else if (bmi > 35.0 && bmi <= 40.0){
                 Result_Category.text = "Obese Class 2"
             }else if (bmi > 40.0){
                 Result_Category.text = "Obese Class 3"
