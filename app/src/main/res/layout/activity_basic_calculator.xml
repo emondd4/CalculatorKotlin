@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_margin="10dp"
-        android:text="TextView" />
+        android:text="0.0" />
 
     <Button
         android:id="@+id/div"

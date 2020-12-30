@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         BMICalculator.setOnClickListener {
-            Toast.makeText(this,"Button 1",Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this,BmiCalculatorActivity::class.java))
         }
 
         TipCalculator.setOnClickListener {
